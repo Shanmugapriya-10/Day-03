@@ -7,7 +7,7 @@ request.send();
 request.onload = function() {
 var res = JSON.parse(request.response);
 
-var Flagsarray = [];
+var outputarray = [];
 for (i=0; i<res.length; i++)
 {
     let obj = { 
@@ -17,8 +17,8 @@ for (i=0; i<res.length; i++)
         populations: res[i].population
 
     } 
-    Flagsarray.push(obj);
+    outputarray.push(obj);
     obj = {};
 }
-console.log("Flagsarray", Flagsarray);
+console.log("Outputarray", outputarray);
 }
